@@ -1,0 +1,75 @@
+{
+    "projects": 
+    [
+        {
+            "id": 1,
+            "title": "online proctoring system",
+            "description": "an online version of proctoring system where faculty can manage sutdent issues and data",
+            "tags": ["web", "nodejs", "expressjs","mysql"],
+            "link": "https://github.com/varaprasadh/proctoring-system---web-app"
+        },
+        {
+            "id": 2,
+            "title": "ASL gesture recogniton",
+            "description": "CNN based hand gesture recognizer as finaly year project",
+            "tags": ["ML","CNN","python"],
+            "link": "https://github.com/varaprasadh/ASL-recognition-CNN"
+        },
+        {
+            "id": 3,
+            "title": "Questionify",
+            "description": "an open source quizz app,built with react native",
+            "tags": ["mobile","reactNative","expo"],
+            "link": "https://github.com/varaprasadh/questionify"
+        },
+        {
+            "id": 4,
+            "title": "Cursors -2020",
+            "description": "browser extension to promote college festival",
+            "tags": ["chrome", "fillustratorirefox", "extensions", "fest"],
+            "link": "https://github.com/varaprasadh/cursors"
+        },
+        {
+            "id": 5,
+            "title": "videodumptyBreak",
+            "description": "ffmpeg application that breaks video into frame with specified paramaters",
+            "tags": ["desktop","electronJS","cross platform"],
+            "link": "https://github.com/varaprasadh/videodumptyBreak"
+        },
+        {
+            "id": 6,
+            "title": "unnamed-awesome-extension",
+            "description": "browser extension that looks great compared to boring homepage",
+            "tags": ["desktop","browser extension","chrome","firefox"],
+            "link": "https://github.com/varaprasadh/unnamed-awesome-extension"
+        },
+        {
+            "id":7,
+            "title": "Lanserve",
+            "description": "local static file server",
+            "tags": ["nodejs","server"],
+            "link": "https://github.com/varaprasadh/LanServe"
+        },
+        {
+            "id":8,
+            "title": "ViewMe",
+            "description": "simple video chat app built with socket.io and node",
+            "tags": ["nodejs","socket.io"],
+            "link": "https://github.com/varaprasadh/ViewMe-The-Video-Chat-App"
+        },
+        {
+            "id":9,
+            "title": "picdec",
+            "description": "it's saves your memories as picture and text",
+            "tags": ["vue.Js","mongodb","nodejs"],
+            "link": "https://github.com/varaprasadh/picdec-VueJs-app"
+        },
+        {
+            "id":10,
+            "title": "adobe-xd-designs",
+            "description": "i like designing in free times with XD and illustrator",
+            "tags": ["adobe","adobeXd","illustrator"],
+            "link": "https://github.com/varaprasadh/adobe-xd-designs"
+        }
+    ]
+}
