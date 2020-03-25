@@ -6,12 +6,112 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+     
+    </style>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    <div class="loader">
+      <div class="loader-box">
+        <span class="_tag _tag1"> &lt; </span>
+        <span class="_tag _tag2"> /</span>
+        <span class="_tag _tag3"> &gt; </span>
+        <div class="load-info">loading ...</div>
+      </div>
+    </div>
+
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+     let loader=document.querySelector('.loader');
+     let app=document.querySelector('#app');
+     app.style.display="none";
+     setTimeout(()=>{
+       loader.classList.add('load-enter');
+       loader.classList.add('load-active');
+     },500)
+     window.onload=()=>{
+       loader.classList.remove('load-active');
+       loader.classList.remove('load-enter');
+       loader.classList.add('load-leave');
+       setTimeout(()=>{
+        loader.style.display="none";
+         setTimeout(() => {
+            app.style.display="block";
+            document.querySelector('#app').classList.add('loaded');
+         }, 100);
+       },1000);
+
+     }
+  
+    </script>
+  <style>
+    .loader{
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: gray;
+      background: black;
+      z-index: 100;
+  }
+  .loader-box{
+      text-align: center;
+  }
+  ._tag{
+    display: inline-block;
+    margin:10px;
+    font-size: 2em;
+    transition: all 1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  ._tag1,.load-leave ._tag1
+  {
+    transform: translateX(-500px);
+  }
+  ._tag3,.load-leave ._tag3{
+    transform: translateX(500px);
+  }
+  .load-leave ._tag2{
+    transform: translateY(500px);
+    opacity:0;
+  }
+  .load-leave .load-info{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  .load-enter ._tag1,
+  .load-enter ._tag3{
+    transform: translateX(0);
+  }
+
+  .load-active ._tag1{
+      animation: slide_l 1s cubic-bezier(0.165, 0.84, 0.44, 1) 2s infinite alternate;
+  }
+  .load-active ._tag3{
+      animation: slide_r 1s cubic-bezier(0.165, 0.84, 0.44, 1) 2s infinite alternate;
+  }
+
+  @keyframes slide_l {
+    to{
+        transform: translateX(-20px);
+    }
+  }
+  @keyframes slide_r {
+    to{
+        transform: translateX(20px);
+    }
+  }
+
+    </style>
   </body>
+
 </html>

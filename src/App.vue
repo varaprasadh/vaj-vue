@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <transition appear name="load" :duration="{ enter: 1000, leave: 2000 }">
-        <Loader v-if="!loaded"/>
-    </transition>
     <LandingPage/>
     <About/>
     <Projects/> 
@@ -22,7 +19,6 @@ import Projects from "./components/Projects";
 import Education from "./components/Education";
 import TechStack from "./components/TechStack";
 import ContactMe from "./components/ContactMe";
-import Loader from "./components/Loader";
 export default {
   name: 'App',
   data:()=>({
@@ -35,17 +31,6 @@ export default {
     Education,
     TechStack,
     ContactMe,
-    Loader
-  },
-  mounted(){
-    window.onload=()=>{
-      setTimeout(()=>{
-        this.loaded=true;
-      },1000);
-      setTimeout(() => {
-        document.querySelector('#app').classList.add('loaded');
-      }, 2000);
-    }
   }
 }
 </script>
