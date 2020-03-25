@@ -27,7 +27,6 @@ export default {
     color: gray;
     background: black;
     z-index: 100;
- 
 }
 .loader-box{
     text-align: center;
